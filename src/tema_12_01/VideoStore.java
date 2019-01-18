@@ -4,18 +4,13 @@ package tema_12_01;
 import java.util.*;
 
 public class VideoStore {
-	static Scanner sc;
-
+	static Scanner sc = new Scanner(System.in);//era si el neinitializat, insa daca nu il folosesti, 
+												//ar fi trebuit sters
 	static double avgRating;
 	static double likes;
-
 	String title;
-
 	boolean checked;
-
 	static List<Video> videosList = new ArrayList<>();
-
-	
 
 	static void addVideo(String title) {
 		videosList.add(new Video(title));
@@ -45,21 +40,19 @@ public class VideoStore {
 		for (Video video : videosList) {
 			if (video.getTitle() == title) {
 				video.receiveRating(rating);
-				System.out.println("You have rated the video: " + title + rating);				
+				System.out.println("You have rated the video: " + title + rating);
 			}
 		}
 	}
+
 	static void avgRating(String title, double avgRating) {
 		for (Video video : videosList) {
 			if (video.getTitle() == title) {
 				video.AvgRating(avgRating);
-				System.out.println("You have rated the video: " + title + avgRating);		
+				System.out.println("You have rated the video: " + title + avgRating);
+			}
+		}
 	}
-		}
-		}
-
-		
-	
 
 	public static double getAvgRating() {
 		return avgRating;
@@ -74,6 +67,7 @@ public class VideoStore {
 	}
 
 	public static void setLikes(double likes) {
+		// bravo ca te-ai prins cum elimini conflictul de nume in cazul campurilor statice
 		VideoStore.likes = likes;
 	}
 
