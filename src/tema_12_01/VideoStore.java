@@ -28,7 +28,8 @@ public class VideoStore {
 
 	static void returnVideo(String title) {
 		for (Video video : videosList) {
-			if (video.getTitle() == title && video.isChecked()) {
+			//if (video.getTitle() == title && video.isChecked()) {
+			if (video.getTitle().equals(title) && video.isChecked()) {
 				video.setChecked(false);
 				System.out.println("You have returned the video: " + title);
 			}
@@ -48,7 +49,8 @@ public class VideoStore {
 
 	static void avgRating(String title, double avgRating) {
 		for (Video video : videosList) {
-			if (video.getTitle() == title) {
+			//if (video.getTitle() == title) {
+			if (video.getTitle().equals(title)) {
 				video.AvgRating(avgRating);
 				System.out.println("You have rated the video: " + title + avgRating);
 			}
