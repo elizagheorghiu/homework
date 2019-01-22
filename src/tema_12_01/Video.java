@@ -57,7 +57,7 @@ public class Video {
 			}
 		}
 		if (numberRatings == 0) {
-			return 0; // faci verificare ca numberRatings sa nu fie 0, altfel crapa impartirea
+			return 0; // faci verificare ca numberRatings sa nu fie 0, altfel crapa impartirea la 0
 		}
 		likes = numberLikes / numberRatings;
 		return likes;

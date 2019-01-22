@@ -4,8 +4,8 @@ package tema_12_01;
 import java.util.*;
 
 public class VideoStore {
-	static Scanner sc = new Scanner(System.in);//era si el neinitializat, insa daca nu il folosesti, 
-												//ar fi trebuit sters
+	static Scanner sc = new Scanner(System.in);// era si el neinitializat, insa daca nu il folosesti,
+												// ar fi trebuit sters
 	static double avgRating;
 	static double likes;
 	String title;
@@ -38,7 +38,8 @@ public class VideoStore {
 	static void receiveRating(String title, int rating) {
 
 		for (Video video : videosList) {
-			if (video.getTitle() == title) {
+			// if (video.getTitle() == title) { //verificarea egalitatii Stringurilor se face cu equals
+			if (video.getTitle().equals(title)) {
 				video.receiveRating(rating);
 				System.out.println("You have rated the video: " + title + rating);
 			}
@@ -68,6 +69,7 @@ public class VideoStore {
 
 	public static void setLikes(double likes) {
 		// bravo ca te-ai prins cum elimini conflictul de nume in cazul campurilor statice
+		// in general insa as vrea sa incercati sa lucrati OOP, fara membri statici
 		VideoStore.likes = likes;
 	}
 
