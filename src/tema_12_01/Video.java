@@ -1,5 +1,6 @@
 package tema_12_01;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -8,7 +9,7 @@ public class Video {
 
 	String title;
 	boolean checked;
-	List<Integer> ratings;
+	List<Integer> ratings =  new ArrayList<>();
 	
 	public Video(String title) {
 		this.title = title;
@@ -35,7 +36,7 @@ public class Video {
 		this.checked = checked;
 	}
 
-	public double AvgRating(double avgRating) {
+	public double avgRating(double avgRating) {
 		int allRatings = 0;
 		int numberRatings = 0;
 		for (Integer rating : ratings) {
@@ -46,7 +47,7 @@ public class Video {
 		return avgRating;
 	}
 
-	public double Likes(double likes) {
+	public double likes(double likes) {
 		int numberRatings = 0;
 		int numberLikes = 0;
 		for (Integer rating : ratings) {
@@ -54,8 +55,12 @@ public class Video {
 			numberLikes += rating;
 		    numberRatings = ratings.size();
 	}
+	
 			
 	}
+		if (numberRatings == 0) {
+			return 0; }
+		
 		likes = numberLikes/numberRatings;
 		return likes;
     }

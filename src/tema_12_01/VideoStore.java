@@ -53,7 +53,7 @@ public class VideoStore {
 	static void avgRating(String title, double avgRating) {
 		for (Video video : videosList) {
 			if (video.getTitle() == title) {
-				video.AvgRating(avgRating);
+				video.avgRating( avgRating);
 				System.out.println("You have rated the video: " + title + avgRating);		
 	}
 		}
@@ -66,7 +66,7 @@ public class VideoStore {
 		return avgRating;
 	}
 
-	public static void setAvgRating(double avgRating) {
+	public static void setavgRating(double avgRating) {
 		VideoStore.avgRating = avgRating;
 	}
 
@@ -74,7 +74,7 @@ public class VideoStore {
 		return likes;
 	}
 
-	public static void setLikes(double likes) {
+	public static void setlikes(double likes) {
 		VideoStore.likes = likes;
 	}
 
@@ -82,8 +82,8 @@ public class VideoStore {
 		for (Video video : videosList) {
 			System.out.println("Video title: " + video.getTitle());
 			System.out.println("Video is checked out: " + video.isChecked());
-			System.out.println("Video has average rating: " + video.AvgRating(avgRating));
-			System.out.println("Video has this % of likes: " + video.Likes(likes));
+			System.out.println("Video has average rating: " + video.avgRating(avgRating));
+			System.out.println("Video has this % of likes: " + video.likes(likes));
 		}
 		System.out.println(videosList);
 	}
