@@ -4,12 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+public class Phone extends PhoneMethods  {
 
-public class Phone implements Methods{
-
-	
-	
-	
 	public Phone (int imei) {
 	}
 	
@@ -29,6 +25,7 @@ public class Phone implements Methods{
 		  Contacts.add(in.nextLine()); 
 		  } 
 	  public List getContacts() {
+		  System.out.print(Contacts);
 		  return Contacts; 
 		  }	
 	
@@ -85,21 +82,27 @@ public class Phone implements Methods{
 	public String material() {
 		return "plastic";
 	}
-
-
-
-	@Override
-	public void listContacts() {
-		
-		
-	}
 	@Override
 	public void addContact(String place, String phoneNumber, String firstName, String lastName) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public ArrayList<Object> listContacts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+		
+		
+	
+
 		
 		
 	}
 	
 	
 
-}
+
 

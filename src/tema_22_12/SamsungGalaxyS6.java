@@ -1,8 +1,8 @@
 package tema_22_12;
 
-public abstract class Samsung extends Phone {
+public class SamsungGalaxyS6 extends Samsung {
 
-	public Samsung(int imei) {
+	public SamsungGalaxyS6(int imei) {
 		super(imei);
 		// TODO Auto-generated constructor stub
 	}

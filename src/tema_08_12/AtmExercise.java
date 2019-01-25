@@ -1,4 +1,4 @@
-package tema_24_11;
+package tema_08_12;
 import java.util.Scanner;
 
 public class AtmExercise{

@@ -9,11 +9,12 @@ public class Video {
 	String title;
 	boolean checked;
 	List<Integer> ratings;
-
+	
 	public Video(String title) {
 		this.title = title;
 	}
 
+	
 	void receiveRating(int rating) {
 		ratings.add(rating);
 	}

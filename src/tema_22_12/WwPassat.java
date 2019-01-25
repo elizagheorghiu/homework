@@ -1,23 +1,24 @@
 package tema_22_12;
 
-public class Logan extends Dacia {
+public class WwPassat extends WW{
 
-	public Logan(int tireSize, String chassisNumber) {
+	public WwPassat (int tireSize, String chassisNumber) {
 		super(tireSize, chassisNumber);
 		// TODO Auto-generated constructor stub
 	}
 
-	final int fuelTankSize = 25;
-	String fuelType = "Petrol";
-	int gear = 4;
-	double consumptionPer100KM = 4.7;
-	double km = 300000;
+
+	final int fuelTankSize = 48;
+	String fuelType = "Diesel 4";
+	int gear = 5;
+	double consumptionPer100KM = 11.7;
+	double km = 434300;
 	int n;
 	
-	float availableFuel = 15; 
-	static int tireSize = 12;
+	float availableFuel = 20; 
+	int tireSize = 12;
 	
-	 float AverageFuelConsumption = 12;
+	float AverageFuelConsumption = 9;
 	
 	String chassisNumber;
 	
@@ -29,12 +30,21 @@ public class Logan extends Dacia {
 			n = 10+10;
 			countKM=n+n;
 			while (countKM<=km) {
-				System.out.println("In gear" + i + "Logan can be drive for " + n + " km");	
+				System.out.println("In gear" + i + "Passat can be drive for " + n + " km");	
 			} 
 				System.out.println("You have reached max number of km for this car which is: "+ km);	
 					
 		}
 		return false;
+	}
+	
+	public int shiftGear(int g) {
+		g=0;
+		for(g=0; g<=gear; g++) {
+		System.out.println	("You are driving your Passat in gear: " + g);
+		 
+	}
+		return g;
 	}
 
 	@Override
@@ -53,9 +63,9 @@ public class Logan extends Dacia {
 	public double consumptionPer100KM (double consumptionPer100KM) {
 		int i = 0;
 		for (i=0; i< gear; i++) {
-		System.out.println("Cannot compute consumption per 100 km for your Dacia Logan because you have not drove in your last gear");
+		System.out.println("Cannot compute consumption per 100 km for your WW Passat because you have not drove in your last gear");
 			}
-		System.out.println("your Dacia Logan's consumption per 100 km is: " );
+		System.out.println("your WW Passat's consumption per 100 km is: " );
 		return consumptionPer100KM ;
 	}
 	
@@ -116,5 +126,6 @@ public class Logan extends Dacia {
 		return fuelTankSize;
 	}
 
+	
 	
 }

@@ -8,6 +8,7 @@ public class VideoStore {
 
 	static double avgRating;
 	static double likes;
+	
 
 	String title;
 
@@ -41,7 +42,7 @@ public class VideoStore {
 	}
 
 	static void receiveRating(String title, int rating) {
-
+		
 		for (Video video : videosList) {
 			if (video.getTitle() == title) {
 				video.receiveRating(rating);
@@ -84,7 +85,7 @@ public class VideoStore {
 			System.out.println("Video has average rating: " + video.AvgRating(avgRating));
 			System.out.println("Video has this % of likes: " + video.Likes(likes));
 		}
-
+		System.out.println(videosList);
 	}
 
 }

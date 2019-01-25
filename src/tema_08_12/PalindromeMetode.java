@@ -1,9 +1,9 @@
-package tema_24_11;
-import java.util;
+package tema_08_12;
 import java.util.Scanner;
 public class PalindromeMetode {
+	private static Scanner sc;
 	public static void main (String [] args ) {
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		System.out.println("Please input a positive integer");
 		int number; 
 		number = sc.nextInt();

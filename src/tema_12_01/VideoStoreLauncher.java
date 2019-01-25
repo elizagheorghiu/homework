@@ -4,6 +4,7 @@ package tema_12_01;
 public class VideoStoreLauncher {
 
 	public static void main(String[] args) {
+		
 				
 				VideoStore.addVideo ("Dancing in the raing");
 				VideoStore.addVideo ("Rocky II");
@@ -20,7 +21,7 @@ public class VideoStoreLauncher {
 				VideoStore.returnVideo("Godfather II");
 				VideoStore.returnVideo("Star Wars Episode IV: A New Hope");
 				
-				VideoStore.receiveRating ("Dancing in the raing",5);				
+				VideoStore.receiveRating ("Dancing in the rain",5);				
 				VideoStore.receiveRating ("Rocky II",4);				
 				VideoStore.receiveRating ("Stardust", 5);				
 				VideoStore.receiveRating("The Matrix", 4);

@@ -1,8 +1,8 @@
 package tema_22_12;
 
-public abstract class Samsung extends Phone {
+public class Nokia3310 extends Nokia {
 
-	public Samsung(int imei) {
+	public Nokia3310(int imei) {
 		super(imei);
 		// TODO Auto-generated constructor stub
 	}

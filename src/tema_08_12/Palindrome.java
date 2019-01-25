@@ -1,13 +1,15 @@
-package tema_24_11;
+package tema_08_12;
 import java.util.Scanner;
 public class Palindrome {
+	private static Scanner sc;
+
 	public static void main (String [] args ) {
 		int n;
 		int sum = 0;
 		int rest;
 		int mem;
 		
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		System.out.println("Please input a positive integer");
 			n =  sc.nextInt();
 			mem = n; 

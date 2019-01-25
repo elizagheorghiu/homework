@@ -1,4 +1,4 @@
-package tema_24_11;
+package tema_08_12;
 
 public class PrimeNumbers {
 	public static void main (String [] args ) {
@@ -23,6 +23,7 @@ public class PrimeNumbers {
 	for (int i = 3; i * i <= n; i+= 2) {
 		if (n % i == 0) {
 			return false; 
+			
 		}
 	}
 	return true;
