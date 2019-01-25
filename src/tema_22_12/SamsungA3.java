@@ -4,7 +4,12 @@ public class SamsungA3 extends Samsung {
 
 	public SamsungA3(int imei) {
 		super(imei);
-		// TODO Auto-generated constructor stub
+		
+		int batteryLife = 70;
+		int batteryRemaining;
+		String color = "Green";
+		String material = "hard plastic";
+	}
 	}
 
-}
+

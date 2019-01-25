@@ -4,7 +4,11 @@ public class SamsungGalaxyS6 extends Samsung {
 
 	public SamsungGalaxyS6(int imei) {
 		super(imei);
-		// TODO Auto-generated constructor stub
+		
+		int batteryLife = 70;
+		int batteryRemaining;
+		String color = "Blue";
+		String material = "soft plastic";
 	}
 
 }

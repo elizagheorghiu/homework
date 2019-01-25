@@ -6,8 +6,8 @@ public class MatrixMethods extends Matrice {
 
 	public static void listMatrix() 
 	{
-		//String list = Arrays.deepToString(myMatrix);
-     	System.out.print(Arrays.toString(myMatrix));
+		
+     	System.out.println(Arrays.deepToString(myMatrix));
 	}
      	
      public static void listFirstRow() 
@@ -19,10 +19,10 @@ public class MatrixMethods extends Matrice {
      public static void calculateMainDiagonal() 
      { 
     	 int sumMain = 0;
-    	 for (int row=0;row<rowWidth; row++) {
-    			for (int col = 0; col<myMatrix[row].length; col++) {
-    				if (row ==col) {
-    				sumMain = sumMain + myMatrix[row][col];
+    	 for (int i=0;i<=5; i++) {
+    			for (int j = 0; j<=5; j++) {
+    				if (i ==j) {
+    				sumMain = sumMain + myMatrix[i][j];
     					System.out.println("Sum of the Main Diagonal is " + sumMain);
     				}
         }
@@ -31,10 +31,10 @@ public class MatrixMethods extends Matrice {
      
      public static void calculateSecondDiagonal()
      {   int sumSecond = 0;
-    	 for (int row=0;row<rowWidth-1; row++) {
- 			for (int col = 0; col<myMatrix[row].length; col++) {
- 				if ( col == rowWidth -row +1) {
- 				sumSecond = sumSecond + myMatrix[row][col];
+    	 for (int i=0; i<=4; i++) {
+ 			for (int j = 0; j<=5-1; j++) {
+ 				if ( j == 5 -i +1) {
+ 				sumSecond = sumSecond + myMatrix[i][j];
  					System.out.println("Sum of the Second Diagonal is " + sumSecond);
  				}
      }
@@ -46,25 +46,27 @@ public class MatrixMethods extends Matrice {
      
      public static int getMaxValue() {
          int maxValue = myMatrix[0][0];
-         for (int row = 0; row < myMatrix.length; row++) {
-             for (int col = 0; col < myMatrix[row].length; col++) {
-                 if (myMatrix[row][col] > maxValue) {
-                     maxValue = myMatrix[row][col];
+         for (int i = 0; i <=5; i++) {
+             for (int j = 0; j <= 5; j++) {
+                 if (myMatrix[i][j] > maxValue) {
+                     maxValue = myMatrix[i][j];
                  }
              }
          }
+         System.out.println(maxValue);
          return maxValue;
 }
      
      public static int getMinValue() {
          int minValue = myMatrix[0][0];
-         for (int row = 0; row < myMatrix.length; row++) {
-             for (int col = 0; col < myMatrix[row].length; col++) {
-                 if (myMatrix[row][col] < minValue) {
-                     minValue = myMatrix[row][col];
+         for (int i = 0; i <= 5; i++) {
+             for (int j = 0; j <= j; j++) {
+                 if (myMatrix[i][j] < minValue) {
+                     minValue = myMatrix[i][j];
                  }
              }
          }
+         System.out.println(minValue);
          return minValue;
 }
 
