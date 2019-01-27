@@ -15,9 +15,14 @@ public class TestPhone {
 
 
 
-	       phone.addContact("1", "phone number", "fist name", "last name");
+	       phone.addContact("1", "0734367148", "Iulia", "Stanca");
 
-	       phone.addContact("2", "phone number", "fist name", "last name");
+	       phone.addContact("2", "0734256888", "Alex", "Chelu");
+	       
+	       phone.addContact("3", "0734256878", "Vali", "Oberling");
+
+	       phone.addContact("4", "0734256848", "Ioana", "Rusu");
+
 
 	       phone.listContacts();
 
@@ -27,15 +32,15 @@ public class TestPhone {
 
 	        // max number of characters - 100
 
-	       phone.sendMessage("phone number", "message content");
+	       phone.sendMessage("0734256848", "Pizza?");
 
-	       phone.listMessages("phone number");
+	       phone.listMessages("0734256848");
 
 
 
 	        // send a message to the second contact from the previous listed
 
-	       phone.call("phone number");
+	       phone.call("0734367148");
 
 	       phone.viewHistory();
 		

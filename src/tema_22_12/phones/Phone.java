@@ -4,93 +4,85 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Phone extends PhoneMethods {
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
-	public Phone(int imei) {
+public class Phone extends PhoneMethods  {
+
+	public Phone (int imei) {
 	}
+	int batteryLife;
+	int batteryRemaining;
+	String color;
+	String material;
 
-	List Contacts = new ArrayList<>();
-	private Scanner in;
+	List <Message> ListMessages = new ArrayList<>();
+	List <Contact> Contacts = new ArrayList<>();
+	List <Contact> History = new ArrayList<>();
+	
+	
 
-	public void addContacts() {
+	@SuppressWarnings("unused")
+	public void addContact(String place, String phoneNumber, String firstName, String lastName ) {
+		Contact Contact = new Contact(place, phoneNumber, firstName,lastName);
+		Contacts.add(Contact);
+	} 
 
-		in = new Scanner(System.in);
-		System.out.println("Contact Place: ");
-		Contacts.add(in.nextLine());
-		System.out.println("Contact Phone Number: ");
-		Contacts.add(in.nextLine());
-		System.out.println("Contact First Name: ");
-		Contacts.add(in.nextLine());
-		System.out.println("Contact Last Name: ");
-		Contacts.add(in.nextLine());
-	}
+		public void sendMessage(String phoneNumber, String messageContent) {
 
-	public List getContacts() {
-		System.out.print(Contacts);
-		return Contacts;
-	}
 
-	// *public void addContact(String place, String phoneNumber, String firstName,
-	// String lastName) {
-//		Scanner sc = new Scanner(System.in); 
-//
-//		System.out.println("Please add a number corresponding with the position of the contact in the addressbook");
-//		place = sc.nextLine();
-//		System.out.println("Please add the phone number");
-//		phoneNumber = sc.nextLine();
-//		System.out.println("Please add the first name");
-//		firstName = sc.nextLine();
-//		System.out.println("Please add the last name");
-//		lastName = sc.nextLine();
-//		System.out.println("Your new contact has been added on position"+ place + "with phone number" + phoneNumber + "and name" + firstName + lastName);	
-	//
-//	}
+		Message Message = new Message(phoneNumber, messageContent);
 
-	public void sendMessage(String phoneNumber, String messageContent) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Please write the phone number");
-		phoneNumber = sc.toString();
-		System.out.println("Please write your message");
-		messageContent = sc.toString();
 		if (messageContent.length() < 500) {
-			// int batteryremaining = batterylife - 1;
+			batteryRemaining = batteryLife - 1;
 			System.out.println("Your message was sent");
+			ListMessages.add(Message);
 		} else {
 			System.out.println("Your message exceeds the maximum characters");
 		}
 	}
 
 	public void listMessages(String phoneNumber) {
-
+		for (Message Message : ListMessages) {
+			if (Message.getPhoneNumber().equals(phoneNumber)) {
+				Message.getMessageContent();
+			
+				System.out.println("You have sent this message" + Message.getMessageContent() + " to this phone number: " + phoneNumber);
+				
+				ListMessages.forEach(System.out::println);
+			}
+		}
 	}
+
 
 	public void call(String phoneNumber) {
-		// int batteryremaining = batterylife - 1;
-
+		int call=0;
+		for( Contact Contact: Contacts) {
+			if(Contact.getPhoneNumber().equals(phoneNumber) ) {
+				call++;
+				batteryRemaining= batteryLife - 2;
+				System.out.println("you have called this number:" + Contact.getPhoneNumber());
+				History.add(Contact);
+			}
+		
+		}
+		
 	}
+
 
 	public void viewHistory() {
-
-	}
-
-	public String color() {
-		return "pink";
-	}
-
-	public String material() {
-		return "plastic";
+		History.forEach(System.out::println);
 	}
 
 	@Override
-	public void addContact(String place, String phoneNumber, String firstName, String lastName) {
-		// TODO Auto-generated method stub
-
+	public void listContacts() {
+		Contacts.forEach(System.out::println);
+		
 	}
 
-	@Override
-	public ArrayList<Object> listContacts() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }
+
+
+
+
+
