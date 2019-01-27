@@ -1,4 +1,4 @@
-package tema_22_12;
+package tema_22_12.phones;
 
 public abstract class Nokia extends Phone{
 

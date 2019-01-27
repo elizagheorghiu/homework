@@ -1,11 +1,12 @@
-package tema_22_12;
+package tema_22_12.vehicles;
 
-public abstract class Dacia extends Car {
+public abstract class Mercedes extends Car {
 
-	public Dacia(int tireSize, String chassisNumber) {
+	public Mercedes(int tireSize, String chassisNumber) {
 		super(tireSize, chassisNumber);
 		// TODO Auto-generated constructor stub
 	}
+	
 	
 	public boolean drive (double km) {
 		int i = 0;
@@ -14,9 +15,9 @@ public abstract class Dacia extends Car {
 			n = 10+10;
 			countKM=n+n;
 			while (countKM<=km) {
-				System.out.println("In gear" + i + "your Dacia can be drive for " + n + " km");	
+				System.out.println("In gear" + i + "your Mercedes can be drive for " + n + " km");	
 			} 
-				System.out.println("You have reached max number of km for your Dacia which is: "+ km);	
+				System.out.println("You have reached max number of km for your Mercedes which is: "+ km);	
 					
 		}
 		return false;
@@ -25,7 +26,7 @@ public abstract class Dacia extends Car {
 		
 	
 	public double start( double km) {
-		System.out.println("At the start of your Dacia your available fuel is: " + availableFuel);			
+		System.out.println("At the start of your Mercedes your available fuel is: " + availableFuel);			
 	
 		return availableFuel;
 	}
@@ -38,7 +39,7 @@ public abstract class Dacia extends Car {
 			n = 10+10;
 			countKM=n+n;
 			availableFuel= availableFuel-15;
-			System.out.println("For driving your Dacia: "+ km + "your available fuel is: " + availableFuel);			
+			System.out.println("For driving your Mercedes: "+ km + "your available fuel is: " + availableFuel);			
 	}
 		return availableFuel;
 	}
@@ -46,15 +47,9 @@ public abstract class Dacia extends Car {
 	public double consumptionPer100KM (double consumptionPer100KM) {
 		int i = 0;
 		for (i=0; i< gear; i++) {
-		System.out.println("Cannot compute consumption per 100 km for your Dacia because you have not drove in your last gear");
+		System.out.println("Cannot compute consumption per 100 km for your Mercedes because you have not drove in your last gear");
 			}
-		System.out.println("your Dacia's consumption per 100 km is: " );
+		System.out.println("your Mercedes's consumption per 100 km is: " );
 		return consumptionPer100KM ;
 	}
-	
-		
-	}	
-
-	
-
-
+}

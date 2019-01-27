@@ -1,4 +1,4 @@
-package tema_22_12;
+package tema_22_12.vehicles;
 
 public abstract class WW extends Dacia{
 
