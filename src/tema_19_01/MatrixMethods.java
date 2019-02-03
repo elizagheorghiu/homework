@@ -19,8 +19,8 @@ public class MatrixMethods extends Matrice {
      public static void calculateMainDiagonal() 
      { 
     	 int sumMain = 0;
-    	 for (int i=0;i<=5; i++) {
-    			for (int j = 0; j<=5; j++) {
+    	 for (int i=0;i<=4; i++) {
+    			for (int j = 0; j<=4; j++) {
     				if (i ==j) {
     				sumMain = sumMain + myMatrix[i][j];
     					System.out.println("Sum of the Main Diagonal is " + sumMain);
@@ -32,8 +32,8 @@ public class MatrixMethods extends Matrice {
      public static void calculateSecondDiagonal()
      {   int sumSecond = 0;
     	 for (int i=0; i<=4; i++) {
- 			for (int j = 0; j<=5-1; j++) {
- 				if ( j == 5 -i +1) {
+ 			for (int j = 0; j<=4-1; j++) {
+ 				if ( j == 4 -i +1) {
  				sumSecond = sumSecond + myMatrix[i][j];
  					System.out.println("Sum of the Second Diagonal is " + sumSecond);
  				}
@@ -46,8 +46,8 @@ public class MatrixMethods extends Matrice {
      
      public static int getMaxValue() {
          int maxValue = myMatrix[0][0];
-         for (int i = 0; i <=5; i++) {
-             for (int j = 0; j <= 5; j++) {
+         for (int i = 0; i <=4; i++) {
+             for (int j = 0; j <= 4; j++) {
                  if (myMatrix[i][j] > maxValue) {
                      maxValue = myMatrix[i][j];
                  }
@@ -59,7 +59,7 @@ public class MatrixMethods extends Matrice {
      
      public static int getMinValue() {
          int minValue = myMatrix[0][0];
-         for (int i = 0; i <= 5; i++) {
+         for (int i = 0; i <= 4; i++) {
              for (int j = 0; j <= j; j++) {
                  if (myMatrix[i][j] < minValue) {
                      minValue = myMatrix[i][j];
