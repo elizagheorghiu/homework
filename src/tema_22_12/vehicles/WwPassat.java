@@ -1,23 +1,24 @@
-package tema_22_12;
+package tema_22_12.vehicles;
 
-public class SClasse extends Mercedes{
+public class WwPassat extends WW{
 
-	public SClasse(int tireSize, String chassisNumber) {
+	public WwPassat (int tireSize, String chassisNumber) {
 		super(tireSize, chassisNumber);
 		// TODO Auto-generated constructor stub
 	}
-	
 
-	final int fuelTankSize = 27;
-	String fuelType = "Diesel 6";
-	int gear = 8;
-	double consumptionPer100KM = 9.02;
-	double km = 53200;
+
+	final int fuelTankSize = 48;
+	String fuelType = "Diesel 4";
+	int gear = 5;
+	double consumptionPer100KM = 11.7;
+	double km = 434300;
 	int n;
 	
-	float availableFuel = 2; 
-	int tireSize = 14;
-	float AverageFuelConsumption = 12;
+	float availableFuel = 20; 
+	int tireSize = 12;
+	
+	float AverageFuelConsumption = 9;
 	
 	String chassisNumber;
 	
@@ -29,7 +30,7 @@ public class SClasse extends Mercedes{
 			n = 10+10;
 			countKM=n+n;
 			while (countKM<=km) {
-				System.out.println("In gear" + i + "SClasse can be drive for " + n + " km");	
+				System.out.println("In gear" + i + "Passat can be drive for " + n + " km");	
 			} 
 				System.out.println("You have reached max number of km for this car which is: "+ km);	
 					
@@ -40,7 +41,7 @@ public class SClasse extends Mercedes{
 	public int shiftGear(int g) {
 		g=0;
 		for(g=0; g<=gear; g++) {
-		System.out.println	("You are driving your Mercedes SCLasse in gear: " + g);
+		System.out.println	("You are driving your Passat in gear: " + g);
 		 
 	}
 		return g;
@@ -62,9 +63,9 @@ public class SClasse extends Mercedes{
 	public double consumptionPer100KM (double consumptionPer100KM) {
 		int i = 0;
 		for (i=0; i< gear; i++) {
-		System.out.println("Cannot compute consumption per 100 km for your Mercedes SClasse because you have not drove in your last gear");
+		System.out.println("Cannot compute consumption per 100 km for your WW Passat because you have not drove in your last gear");
 			}
-		System.out.println("your Mercedes SClasse's consumption per 100 km is: " );
+		System.out.println("your WW Passat's consumption per 100 km is: " );
 		return consumptionPer100KM ;
 	}
 	
@@ -127,5 +128,4 @@ public class SClasse extends Mercedes{
 
 	
 	
-
 }
