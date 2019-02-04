@@ -1,18 +1,13 @@
 package quiz;
 
-
-
 public class Triangle implements Shape {
 
+	//te rog sa nu mai faci campuri/metode statice
 	static int height;
 	static int base;
-	
-	
-	
-	public Triangle(int height, int base) {
-		}
-	
 
+	public Triangle(int height, int base) {
+	}
 
 	public static int getHeight() {
 		return height;
@@ -32,32 +27,29 @@ public class Triangle implements Shape {
 
 	public double calculateSurface() {
 		double surface;
-		surface = height* base;
+		surface = height * base;
 		System.out.println(surface);
 		return surface;
-			}
-	
-	
+	}
+
 	public double calculatePerimeter() {
-		double perimeter; 
+		double perimeter;
 		perimeter = height + base;
 		System.out.println(perimeter);
 		return perimeter;
-					
+
 	}
-	
-double perimeter = calculatePerimeter();
-	
+
+	double perimeter = calculatePerimeter();
+
 	public double getPerimeter() {
 		return perimeter;
 	}
-	
-	
+
 	public double getSurface() {
 		return surface;
 	}
-	
+
 	double surface = calculateSurface();
-	
 
 }
