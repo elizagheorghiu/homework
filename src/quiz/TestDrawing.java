@@ -6,14 +6,11 @@ import org.junit.Test;
 
 public class TestDrawing {
 
-	private TestDrawing test = new TestDrawing ();
-	
-	public void CreateCircle() {
-		//test.Circle.
-		
-	}
+	private TestDrawing test = new TestDrawing();
 
-	
-	
+	public void CreateCircle() {
+		// test.Circle.
+
+	}
 
 }

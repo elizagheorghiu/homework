@@ -2,14 +2,15 @@ package quiz;
 
 public class Rectangle implements Shape {
 
+	// te rog sa nu mai faci campuri/metode statice
 	static int latime;
 	static int lungime;
-	
+
 	public Rectangle(int latime, int lungime) {
 		calculateSurface();
 		calculatePerimeter();
 	}
-	
+
 	public static int getLatime() {
 		return latime;
 	}
@@ -27,40 +28,33 @@ public class Rectangle implements Shape {
 	}
 
 	@Override
-	   public double calculateSurface() {
+	public double calculateSurface() {
 		double surface;
-		surface = latime*lungime;
+		surface = latime * lungime;
 		System.out.println(surface);
 		return surface;
-				
+
 	}
 
 	@Override
 	public double calculatePerimeter() {
-		double perimeter; 
-		perimeter = (latime*2)+(lungime*2);
+		double perimeter;
+		perimeter = (latime * 2) + (lungime * 2);
 		System.out.println(perimeter);
 		return perimeter;
-		
-		
+
 	}
 
-double perimeter = calculatePerimeter();
-	
+	double perimeter = calculatePerimeter();
+
 	public double getPerimeter() {
 		return perimeter;
 	}
-	
-	
+
 	public double getSurface() {
 		return surface;
 	}
-	
+
 	double surface = calculateSurface();
-	
-	
-	}
 
-
-
-
+}

@@ -3,7 +3,7 @@ package quiz;
 
 public class Square implements Shape{
 
-
+	// te rog sa nu mai faci campuri/metode statice
 	static int latura; 
 			
 	
