@@ -1,39 +1,43 @@
 package tema_08_12;
+
 import java.util.Scanner;
+
 public class PalindromeMetode {
 	private static Scanner sc;
-	public static void main (String [] args ) {
+
+	public static void main(String[] args) {
 		sc = new Scanner(System.in);
 		System.out.println("Please input a positive integer");
-		int number; 
+		int number;
 		number = sc.nextInt();
-		boolean result; 
+		boolean result;
 		result = isPalindrome(number);
 		System.out.println(result);
 	}
-	public static double Reverse (int number) {
-		int result = 0; 
+
+	public static double Reverse(int number) {
+		int result = 0;
 		int rest;
-		while (number>0)	{
-			rest = number%10;
+		while (number > 0) {
+			rest = number % 10;
 			result = (result * 10) + rest;
-			number = number/10;
+			number = number / 10;
 		}
-		return result; 
-		
-	}
-	public static boolean isPalindrome (int number) {
-		int n= (int) Reverse(number);
-		boolean result = false; 
-		if (n==number) {
-			result = true; 
-			System.out.println("The number "+ number + "is a palindrome");
-		} else if (n!=number){ 
-				result = false; 
-				System.out.println("The number"+ number + "is not a palindrome");
-			}
 		return result;
-			
-		
+
+	}
+
+	public static boolean isPalindrome(int number) {
+		int n = (int) Reverse(number);
+		boolean result = false;
+		if (n == number) {
+			result = true;
+			System.out.println("The number " + number + "is a palindrome");
+		} else if (n != number) {
+			result = false;
+			System.out.println("The number" + number + "is not a palindrome");
+		}
+		return result;
+
 	}
 }

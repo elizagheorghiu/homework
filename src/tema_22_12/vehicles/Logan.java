@@ -13,26 +13,26 @@ public class Logan extends Dacia {
 	double consumptionPer100KM = 4.7;
 	double km = 300000;
 	int n;
-	
-	float availableFuel = 15; 
+
+	float availableFuel = 15;
 	static int tireSize = 12;
-	
-	 float AverageFuelConsumption = 12;
-	
+
+	float AverageFuelConsumption = 12;
+
 	String chassisNumber;
-	
+
 	@Override
 	public boolean drive(double km) {
 		int i = 0;
-		double countKM=0;
-		for (i = 0; i<=gear; i++) {
-			n = 10+10;
-			countKM=n+n;
-			while (countKM<=km) {
-				System.out.println("In gear" + i + "Logan can be drive for " + n + " km");	
-			} 
-				System.out.println("You have reached max number of km for this car which is: "+ km);	
-					
+		double countKM = 0;
+		for (i = 0; i <= gear; i++) {
+			n = 10 + 10;
+			countKM = n + n;
+			while (countKM <= km) {
+				System.out.println("In gear" + i + "Logan can be drive for " + n + " km");
+			}
+			System.out.println("You have reached max number of km for this car which is: " + km);
+
 		}
 		return false;
 	}
@@ -50,19 +50,15 @@ public class Logan extends Dacia {
 	}
 
 	@Override
-	public double consumptionPer100KM (double consumptionPer100KM) {
+	public double consumptionPer100KM(double consumptionPer100KM) {
 		int i = 0;
-		for (i=0; i< gear; i++) {
-		System.out.println("Cannot compute consumption per 100 km for your Dacia Logan because you have not drove in your last gear");
-			}
-		System.out.println("your Dacia Logan's consumption per 100 km is: " );
-		return consumptionPer100KM ;
+		for (i = 0; i < gear; i++) {
+			System.out.println(
+					"Cannot compute consumption per 100 km for your Dacia Logan because you have not drove in your last gear");
+		}
+		System.out.println("your Dacia Logan's consumption per 100 km is: ");
+		return consumptionPer100KM;
 	}
-	
-
-	
-		
-	
 
 	public String getFuelType() {
 		return fuelType;
@@ -75,7 +71,7 @@ public class Logan extends Dacia {
 	public int getGear() {
 		return gear;
 	}
-	
+
 	public void setGear(int gear) {
 		this.gear = gear;
 	}
@@ -116,5 +112,4 @@ public class Logan extends Dacia {
 		return fuelTankSize;
 	}
 
-	
 }

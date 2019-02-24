@@ -9,8 +9,6 @@ public class VideoStore {
 	static double avgRating;
 	static double likes;
 
-	
-
 	String title;
 	boolean checked;
 	static List<Video> videosList = new ArrayList<>();
@@ -31,7 +29,7 @@ public class VideoStore {
 
 	static void returnVideo(String title) {
 		for (Video video : videosList) {
-			//if (video.getTitle() == title && video.isChecked()) {
+			// if (video.getTitle() == title && video.isChecked()) {
 			if (video.getTitle().equals(title) && video.isChecked()) {
 				video.setChecked(false);
 				System.out.println("You have returned the video: " + title);
@@ -40,9 +38,10 @@ public class VideoStore {
 	}
 
 	static void receiveRating(String title, int rating) {
-		
+
 		for (Video video : videosList) {
-			// if (video.getTitle() == title) { //verificarea egalitatii Stringurilor se face cu equals
+			// if (video.getTitle() == title) { //verificarea egalitatii Stringurilor se
+			// face cu equals
 			if (video.getTitle().equals(title)) {
 				video.receiveRating(rating);
 				System.out.println("You have rated the video: " + title + rating);
@@ -54,15 +53,15 @@ public class VideoStore {
 		for (Video video : videosList) {
 
 			if (video.getTitle() == title) {
-				video.avgRating( avgRating);
-				System.out.println("You have rated the video: " + title + avgRating);		
-
-			// {
-			if (video.getTitle().equals(title)) {
 				video.avgRating(avgRating);
 				System.out.println("You have rated the video: " + title + avgRating);
+
+				// {
+				if (video.getTitle().equals(title)) {
+					video.avgRating(avgRating);
+					System.out.println("You have rated the video: " + title + avgRating);
+				}
 			}
-		}
 		}
 	}
 
@@ -77,7 +76,6 @@ public class VideoStore {
 	public static double getLikes() {
 		return likes;
 	}
-
 
 	public static void setlikes(double likes) {
 

@@ -8,42 +8,34 @@ public class TestPhone {
 	public static String lastName;
 
 	public static void main(String[] args) {
-		
+
 		// Phone phone= new Samsung(); // shouldn't compile
 
-	       Phone phone = new SamsungGalaxyS6(12121);
+		Phone phone = new SamsungGalaxyS6(12121);
 
+		phone.addContact("1", "0734367148", "Iulia", "Stanca");
 
+		phone.addContact("2", "0734256888", "Alex", "Chelu");
 
-	       phone.addContact("1", "0734367148", "Iulia", "Stanca");
+		phone.addContact("3", "0734256878", "Vali", "Oberling");
 
-	       phone.addContact("2", "0734256888", "Alex", "Chelu");
-	       
-	       phone.addContact("3", "0734256878", "Vali", "Oberling");
+		phone.addContact("4", "0734256848", "Ioana", "Rusu");
 
-	       phone.addContact("4", "0734256848", "Ioana", "Rusu");
+		phone.listContacts();
 
+		// send a message to the first contact from the previous listed
 
-	       phone.listContacts();
+		// max number of characters - 100
 
+		phone.sendMessage("0734256848", "Pizza?");
 
+		phone.listMessages("0734256848");
 
-	       // send a message to the first contact from the previous listed
+		// send a message to the second contact from the previous listed
 
-	        // max number of characters - 100
+		phone.call("0734367148");
 
-	       phone.sendMessage("0734256848", "Pizza?");
+		phone.viewHistory();
 
-	       phone.listMessages("0734256848");
-
-
-
-	        // send a message to the second contact from the previous listed
-
-	       phone.call("0734367148");
-
-	       phone.viewHistory();
-		
-		
 	}
 }

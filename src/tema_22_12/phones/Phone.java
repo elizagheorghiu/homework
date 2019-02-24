@@ -6,29 +6,27 @@ import java.util.Scanner;
 
 import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
-public class Phone extends PhoneMethods  {
+public class Phone extends PhoneMethods {
 
-	public Phone (int imei) {
+	public Phone(int imei) {
 	}
+
 	int batteryLife;
 	int batteryRemaining;
 	String color;
 	String material;
 
-	List <Message> ListMessages = new ArrayList<>();
-	List <Contact> Contacts = new ArrayList<>();
-	List <Contact> History = new ArrayList<>();
-	
-	
+	List<Message> ListMessages = new ArrayList<>();
+	List<Contact> Contacts = new ArrayList<>();
+	List<Contact> History = new ArrayList<>();
 
 	@SuppressWarnings("unused")
-	public void addContact(String place, String phoneNumber, String firstName, String lastName ) {
-		Contact Contact = new Contact(place, phoneNumber, firstName,lastName);
+	public void addContact(String place, String phoneNumber, String firstName, String lastName) {
+		Contact Contact = new Contact(place, phoneNumber, firstName, lastName);
 		Contacts.add(Contact);
-	} 
+	}
 
-		public void sendMessage(String phoneNumber, String messageContent) {
-
+	public void sendMessage(String phoneNumber, String messageContent) {
 
 		Message Message = new Message(phoneNumber, messageContent);
 
@@ -45,29 +43,28 @@ public class Phone extends PhoneMethods  {
 		for (Message Message : ListMessages) {
 			if (Message.getPhoneNumber().equals(phoneNumber)) {
 				Message.getMessageContent();
-			
-				System.out.println("You have sent this message" + Message.getMessageContent() + " to this phone number: " + phoneNumber);
-				
+
+				System.out.println("You have sent this message" + Message.getMessageContent()
+						+ " to this phone number: " + phoneNumber);
+
 				ListMessages.forEach(System.out::println);
 			}
 		}
 	}
 
-
 	public void call(String phoneNumber) {
-		int call=0;
-		for( Contact Contact: Contacts) {
-			if(Contact.getPhoneNumber().equals(phoneNumber) ) {
+		int call = 0;
+		for (Contact Contact : Contacts) {
+			if (Contact.getPhoneNumber().equals(phoneNumber)) {
 				call++;
-				batteryRemaining= batteryLife - 2;
+				batteryRemaining = batteryLife - 2;
 				System.out.println("you have called this number:" + Contact.getPhoneNumber());
 				History.add(Contact);
 			}
-		
-		}
-		
-	}
 
+		}
+
+	}
 
 	public void viewHistory() {
 		History.forEach(System.out::println);
@@ -76,13 +73,7 @@ public class Phone extends PhoneMethods  {
 	@Override
 	public void listContacts() {
 		Contacts.forEach(System.out::println);
-		
+
 	}
 
-
 }
-
-
-
-
-

@@ -1,12 +1,11 @@
 package tema_22_12.vehicles;
 
-public class SClasse extends Mercedes{
+public class SClasse extends Mercedes {
 
 	public SClasse(int tireSize, String chassisNumber) {
 		super(tireSize, chassisNumber);
 		// TODO Auto-generated constructor stub
 	}
-	
 
 	final int fuelTankSize = 27;
 	String fuelType = "Diesel 6";
@@ -14,35 +13,35 @@ public class SClasse extends Mercedes{
 	double consumptionPer100KM = 9.02;
 	double km = 53200;
 	int n;
-	
-	float availableFuel = 2; 
+
+	float availableFuel = 2;
 	int tireSize = 14;
 	float AverageFuelConsumption = 12;
-	
+
 	String chassisNumber;
-	
+
 	@Override
 	public boolean drive(double km) {
 		int i = 0;
-		double countKM=0;
-		for (i = 0; i<=gear; i++) {
-			n = 10+10;
-			countKM=n+n;
-			while (countKM<=km) {
-				System.out.println("In gear" + i + "SClasse can be drive for " + n + " km");	
-			} 
-				System.out.println("You have reached max number of km for this car which is: "+ km);	
-					
+		double countKM = 0;
+		for (i = 0; i <= gear; i++) {
+			n = 10 + 10;
+			countKM = n + n;
+			while (countKM <= km) {
+				System.out.println("In gear" + i + "SClasse can be drive for " + n + " km");
+			}
+			System.out.println("You have reached max number of km for this car which is: " + km);
+
 		}
 		return false;
 	}
-	
+
 	public int shiftGear(int g) {
-		g=0;
-		for(g=0; g<=gear; g++) {
-		System.out.println	("You are driving your Mercedes SCLasse in gear: " + g);
-		 
-	}
+		g = 0;
+		for (g = 0; g <= gear; g++) {
+			System.out.println("You are driving your Mercedes SCLasse in gear: " + g);
+
+		}
 		return g;
 	}
 
@@ -59,19 +58,15 @@ public class SClasse extends Mercedes{
 	}
 
 	@Override
-	public double consumptionPer100KM (double consumptionPer100KM) {
+	public double consumptionPer100KM(double consumptionPer100KM) {
 		int i = 0;
-		for (i=0; i< gear; i++) {
-		System.out.println("Cannot compute consumption per 100 km for your Mercedes SClasse because you have not drove in your last gear");
-			}
-		System.out.println("your Mercedes SClasse's consumption per 100 km is: " );
-		return consumptionPer100KM ;
+		for (i = 0; i < gear; i++) {
+			System.out.println(
+					"Cannot compute consumption per 100 km for your Mercedes SClasse because you have not drove in your last gear");
+		}
+		System.out.println("your Mercedes SClasse's consumption per 100 km is: ");
+		return consumptionPer100KM;
 	}
-	
-
-	
-		
-	
 
 	public String getFuelType() {
 		return fuelType;
@@ -84,7 +79,7 @@ public class SClasse extends Mercedes{
 	public int getGear() {
 		return gear;
 	}
-	
+
 	public void setGear(int gear) {
 		this.gear = gear;
 	}
@@ -124,8 +119,5 @@ public class SClasse extends Mercedes{
 	public int getFuelTankSize() {
 		return fuelTankSize;
 	}
-
-	
-	
 
 }

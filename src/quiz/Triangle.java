@@ -2,7 +2,7 @@ package quiz;
 
 public class Triangle implements Shape {
 
-	//te rog sa nu mai faci campuri/metode statice
+	// te rog sa nu mai faci campuri/metode statice
 	static int height;
 	static int base;
 

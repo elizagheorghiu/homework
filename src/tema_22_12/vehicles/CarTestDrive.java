@@ -1,13 +1,15 @@
 package tema_22_12.vehicles;
 
 public class CarTestDrive {
-	
+
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
-		
-		//Car car = new Car(); // This should not compile.
 
-		//Car car = new Dacia(27, "oiqe0934hkkadsn"); // This should not compile! If I want to create a Dacia car, I will need to create an instance of a Dacia model.
+		// Car car = new Car(); // This should not compile.
+
+		// Car car = new Dacia(27, "oiqe0934hkkadsn"); // This should not compile! If I
+		// want to create a Dacia car, I will need to create an instance of a Dacia
+		// model.
 
 		Car car = new Logan(27, "oiqe0934hkkadsn"); // Logan can extend from Dacia, while Dacia extends from Car
 
@@ -51,9 +53,7 @@ public class CarTestDrive {
 
 		float fuleConsumedPer100Km = car.getAverageFuelConsumption();
 
-
-
-		Vehicle vehicle = new WwGolf(30, "1987ddkshik289"); //available fuel and chassis number
+		Vehicle vehicle = new WwGolf(30, "1987ddkshik289"); // available fuel and chassis number
 
 		vehicle.start(20);
 
@@ -63,10 +63,9 @@ public class CarTestDrive {
 
 		Car car1 = (Car) vehicle;
 
-	    availableFuel = car.getAvailableFuel();
+		availableFuel = car.getAvailableFuel();
 
 		fuleConsumedPer100Km = car.getAverageFuelConsumption();
 
-		
-}
+	}
 }
