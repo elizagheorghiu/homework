@@ -7,6 +7,3 @@ public class Novel extends Book {
 		// TODO Auto-generated constructor stub
 	}
 }
-
-
-	

@@ -1,17 +1,16 @@
 package tema_22_12.phones;
 
 public class Message {
-	
-	
-    private String phoneNumber;
-    private String messageContent;
-    
-    public Message(String phoneNumber, String messageContent){
-        
-    	this.phoneNumber=phoneNumber;
-    	this.messageContent = messageContent;
-        
-     }
+
+	private String phoneNumber;
+	private String messageContent;
+
+	public Message(String phoneNumber, String messageContent) {
+
+		this.phoneNumber = phoneNumber;
+		this.messageContent = messageContent;
+
+	}
 
 	public String getPhoneNumber() {
 		return phoneNumber;
@@ -28,5 +27,5 @@ public class Message {
 	public void setMessageContent(String messageContent) {
 		this.messageContent = messageContent;
 	}
- 
+
 }

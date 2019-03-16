@@ -1,17 +1,15 @@
 package quiz;
 
-
-public class Square implements Shape{
+public class Square implements Shape {
 
 	// te rog sa nu mai faci campuri/metode statice
-	static int latura; 
-			
-	
+	static int latura;
+
 	public Square(int latura) {
 		calculateSurface();
 		calculatePerimeter();
 	}
-	
+
 	public int getLatura() {
 		return latura;
 	}
@@ -21,35 +19,33 @@ public class Square implements Shape{
 	}
 
 	@Override
-	
-	 public double calculateSurface()  {
+
+	public double calculateSurface() {
 		double surface;
-		surface = latura*2;
+		surface = latura * 2;
 		System.out.println(surface);
 		return surface;
-			}
+	}
 
 	@Override
 	public double calculatePerimeter() {
-		double perimeter; 
-		perimeter = latura *4;
+		double perimeter;
+		perimeter = latura * 4;
 		System.out.println(perimeter);
 		return perimeter;
-		
+
 	}
-double perimeter = calculatePerimeter();
-	
+
+	double perimeter = calculatePerimeter();
+
 	public double getPerimeter() {
 		return perimeter;
 	}
-	
-	
+
 	public double getSurface() {
 		return surface;
 	}
-	
+
 	double surface = calculateSurface();
-	
 
-		}
-
+}
