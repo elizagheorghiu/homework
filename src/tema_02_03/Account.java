@@ -3,9 +3,9 @@ package tema_02_03;
 public class Account {
 	int PIN;
 	String AccountInfo;
-	float balance;
+	int balance;
 	
-	public float getBalance() {
+	public int getBalance() {
 		return balance;
 	}
 
@@ -16,11 +16,11 @@ public class Account {
 	public String getAccountInfo() {
 		return AccountInfo;
 	}
-
 	
-	
-	public Account(int PIN, String AccountInfo, float balance) {
-		
+	public Account(int PIN, String AccountInfo, int balance) {
+		this.PIN=PIN;
+		this.AccountInfo=AccountInfo;
+		this.balance=balance;
 		
 	}
 	

@@ -1,6 +1,9 @@
 package tema_02_03;
 
-public class User {
+import java.util.HashMap;
+import java.util.Map;
+
+public class User  {
 	private String Name;
 	private String AccountID;
 	
@@ -26,7 +29,7 @@ public class User {
 		this.Name=Name;
 		this.AccountID=AccountID;
 	}
-
+	
 	
 	}
 
