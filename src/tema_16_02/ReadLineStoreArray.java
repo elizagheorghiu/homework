@@ -1,4 +1,4 @@
-package tema_16_03;
+package tema_16_02;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;

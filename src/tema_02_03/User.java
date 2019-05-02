@@ -1,37 +1,52 @@
 package tema_02_03;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
-public class User  {
-	private String Name;
-	private String AccountID;
-	
-	public String getName() {
-		return Name;
+public class User {
+
+	static private String firstName;
+	static private String lastName;
+	static private String userID;
+
+	private ArrayList<Account> accounts;
+
+	public User(String firstName, String lastName, String userID) {
+		User.firstName = firstName;
+		User.lastName = lastName;
+		User.userID = userID;
+
 	}
 
-	public void setName(String name) {
-		Name = name;
+	public static String getFirstName() {
+		return firstName;
 	}
 
-	public String getAccountID() {
-		return AccountID;
+	public void setFirstName(String firstName) {
+		User.firstName = firstName;
 	}
 
-	public void setAccountID(String accountID) {
-		AccountID = accountID;
+	public static String getLastName() {
+		return lastName;
 	}
 
-	
-		
-	public User(String Name, String AccountID ) {
-		this.Name=Name;
-		this.AccountID=AccountID;
-	}
-	
-	
+	public void setLastName(String lastName) {
+		User.lastName = lastName;
 	}
 
-	
+	public String getUserID() {
+		return userID;
+	}
 
+	public void setUserID(String userID) {
+		User.userID = userID;
+	}
+
+	public ArrayList<Account> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(ArrayList<Account> accounts) {
+		this.accounts = accounts;
+	}
+
+}

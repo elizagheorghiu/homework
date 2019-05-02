@@ -1,6 +1,5 @@
-package tema_02_03;
+package ATM_IO;
 
-import java.util.Scanner;
 
 
 
@@ -9,10 +8,7 @@ public class ATM {
 		
 	
 	Transaction.checkID();
-	Transaction.transaction();
-	
-	
-	
+
 	}
 	
 }

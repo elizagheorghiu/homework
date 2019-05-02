@@ -1,29 +1,32 @@
 package tema_02_03;
 
 public class Account {
-	int PIN;
-	String AccountInfo;
-	int balance;
-	
-	public int getBalance() {
-		return balance;
+
+	static double accountBalance;
+
+	public double getAccountBalance() {
+		return getAccountBalance();
 	}
 
-	public int getPIN() {
-		return PIN;
+	public static void setAccountBalance(double accountBalance) {
+		Account.accountBalance = accountBalance;
 	}
 
-	public String getAccountInfo() {
-		return AccountInfo;
+	public int getPin() {
+		return pin;
 	}
-	
-	public Account(int PIN, String AccountInfo, int balance) {
-		this.PIN=PIN;
-		this.AccountInfo=AccountInfo;
-		this.balance=balance;
-		
+
+	public static void setPin(int pin) {
+		Account.pin = pin;
 	}
-	
-	
-	
+
+	static public int pin;
+
+	public Account(double accountBalance, int pin) {
+
+		Account.accountBalance = accountBalance;
+		Account.pin = pin;
+
+	}
+
 }

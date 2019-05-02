@@ -1,0 +1,11 @@
+Eliza,Gheorghiu,EG,10000,1234
+Anda,Bogdan,AB,20000,6523
+Alina,Stanciu,AS,32322,4367
+Cristi,Stancu,CS,43355,1465
+Vlad,Manea,VM,436742,7642
+Alex,Petre,AP,75533,8632
+Andrei,Nitu,AN,654276,2465
+Razvan,Preda,RP,74343,6642
+Liliana,Constantin,LC,436522,6532
+Paul,Ionescu,PI,878654,5424
+Ana,Popescu,AI,3277,1243
